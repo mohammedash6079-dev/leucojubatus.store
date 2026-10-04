@@ -1,0 +1,1 @@
+export default function Page(){return <main className="editorial"><span className="eyebrow">LEUCO JUBATUS / INFORMATION</span><h1>FREQUENTLY ASKED.</h1><p className="bigcopy">Orders are priced in Sri Lankan Rupees. Available sizes and colours are shown per product. Contact LEUCO JUBATUS for order, delivery, sizing and exchange assistance.</p></main>}

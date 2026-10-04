@@ -1,0 +1,1 @@
+import {CartClient} from '@/components/CartClient';export default function Cart(){return <main className="page narrow"><div className="page-title"><span className="eyebrow">YOUR SELECTION</span><h1>SHOPPING BAG.</h1></div><CartClient/></main>}

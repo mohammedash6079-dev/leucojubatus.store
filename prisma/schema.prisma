@@ -1,0 +1,11 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+enum Role { CUSTOMER ADMIN STAFF }
+enum OrderStatus { PENDING CONFIRMED PROCESSING SHIPPED DELIVERED CANCELLED }
+enum PaymentStatus { PENDING PAID FAILED REFUNDED }
+model User { id String @id @default(cuid()) email String @unique passwordHash String? role Role @default(CUSTOMER) createdAt DateTime @default(now()) orders Order[] }
+model Product { id String @id @default(cuid()) name String slug String @unique description String sku String @unique category String @default("New Arrivals") fabric String? fit String? care String? active Boolean @default(true) createdAt DateTime @default(now()) updatedAt DateTime @updatedAt variants ProductVariant[] images ProductImage[] }
+model ProductVariant { id String @id @default(cuid()) productId String product Product @relation(fields:[productId],references:[id],onDelete:Cascade) size String color String sku String @unique price Int stock Int @default(0) @@unique([productId,size,color]) }
+model ProductImage { id String @id @default(cuid()) productId String product Product @relation(fields:[productId],references:[id],onDelete:Cascade) url String alt String sort Int @default(0) }
+model Order { id String @id @default(cuid()) orderNumber String @unique userId String? user User? @relation(fields:[userId],references:[id]) name String phone String email String? address String city String district String subtotal Int deliveryFee Int total Int status OrderStatus @default(PENDING) paymentStatus PaymentStatus @default(PENDING) paymentMethod String trackingNumber String? courier String? createdAt DateTime @default(now()) updatedAt DateTime @updatedAt items OrderItem[] }
+model OrderItem { id String @id @default(cuid()) orderId String order Order @relation(fields:[orderId],references:[id],onDelete:Cascade) productName String variantSku String size String color String unitPrice Int quantity Int }

@@ -1,0 +1,1 @@
+import {CheckoutClient} from '@/components/CheckoutClient';export default function Checkout(){return <main className="page narrow"><div className="page-title"><span className="eyebrow">SECURE CHECKOUT</span><h1>COMPLETE YOUR ORDER.</h1></div><CheckoutClient/></main>}

@@ -1,0 +1,1 @@
+export default function Page(){return <main className="editorial"><span className="eyebrow">LEUCO JUBATUS / INFORMATION</span><h1>SHIPPING & DELIVERY.</h1><p className="bigcopy">We support delivery addresses across Sri Lanka. Delivery fees and estimated delivery windows are calculated at checkout and may vary by area and courier arrangement.</p></main>}

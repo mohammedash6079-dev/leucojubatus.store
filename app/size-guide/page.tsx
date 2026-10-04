@@ -1,0 +1,1 @@
+export default function Page(){return <main className="editorial"><span className="eyebrow">LEUCO JUBATUS / INFORMATION</span><h1>SIZE GUIDE.</h1><p className="bigcopy">Joggers: 28, 30, 32, 34, 36, 38. Measure your waist where you normally wear your trousers. Product-specific fit notes appear on each product page.</p></main>}

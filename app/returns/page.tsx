@@ -1,0 +1,1 @@
+export default function Page(){return <main className="editorial"><span className="eyebrow">LEUCO JUBATUS / INFORMATION</span><h1>RETURNS & EXCHANGES.</h1><p className="bigcopy">Items must meet the store return/exchange conditions. Final production policy should state the eligible period, garment condition requirements, exclusions and return delivery responsibility.</p></main>}
